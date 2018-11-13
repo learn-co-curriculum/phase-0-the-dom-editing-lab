@@ -126,12 +126,10 @@ look **important**. It's usually bold in browsers by default. The `<em>` tag
 allows us to _emphasize_ certain text. This text is typically rendered as
 italic in browsers.
 
-Let's add a link to MDN to define HTML. We'll use the`<a>` tag for this.
+Let's add a link to MDN to define HTML. We'll use the`<a>` tag for this. Add this to our existing `<p>`:
 
 ```html
-<p>
-  We're writing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> markup to display in our <strong>browser</strong>. We're basically telling computers what to do. <em>Neat!</em>
-</p>
+  We're writing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> markup to display in our <strong>browser</strong>.
 ```
 
 Notice that HTML attributes are shown alongside their opening tag e.g. the
