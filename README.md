@@ -2,13 +2,11 @@
 
 ## Problem Statement
 
+1. Identify that DOM nodes are written as HTML
+
+## Introduction
 We've started looking at the DOM and its structure. Now it's time to see what we
 can do with it.
-
-## Objectives
-
-1. Identify that DOM nodes are written as HTML
-2. Explain the difference between inline and block elements
 
 ## Identify That DOM Nodes Are Written As HTML
 
@@ -35,7 +33,7 @@ Another normal tag is a main section:
 </main>
 ```
 
-To _nest_ items in a "normal tag," we simply add the child node HTML element
+To nest items in a normal tag, we simply add the child node HTML element
 content between its parent's starting and ending tags:
 
 ```html
@@ -46,9 +44,9 @@ content between its parent's starting and ending tags:
 </body>
 ```
 
-Some nodes only have a starting tag. Those are called _self-closing_ elements.
+Some nodes only have a starting tag. Those are called self-closing elements.
 These elements do not have any content nested inside of them. More technically,
-they are called _void_ elements. Void elements cannot, therefore, be parent nodes.
+they are called void elements. Void elements cannot, therefore, be parent nodes.
 
 An example of a self-closing tag is an image:
 
@@ -62,10 +60,12 @@ In self-closing tags, the trailing `/` is optional. This is valid too:
 <img src="https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif" alt="A policeman" />
 ```
 
-Also recall that every HTML element has a `display` value. This value can be
-many things (including `none`, which hides the elements), but the default value
-for most elements is either [`block`][html-block-elements] or
-[`inline`][html-inline-elements].
+Every HTML element has a `display` value. Since these are known by modern
+browsers, you don't have to worry about specifying the value unless you want to
+change it. This value can be many things (including `none`, which hides the
+elements), but the default value for most elements is either
+[`block`][html-block-elements] or [`inline`][html-inline-elements]. For the
+images above, the value is `inline`. 
 
 ### Instructions
 
@@ -187,6 +187,7 @@ This is the _DOM tree_!
 When you're ready to leave this lab, end the `httpserver` server by typing
 "Control + C." Run `learn` from the command line. If the
 test pass, enter `learn submit`. You'll then be prompted to move on.
+
 
 ## Conclusion
 
