@@ -17,8 +17,8 @@ clone of the HTML found in the source HTML file.  DOM nodes represent all
 components that make up a web page.
 
 DOM nodes most often have a starting tag and an ending tag. Because of this,
-something else could "nest" inside. This inner node is called a "child node."
-The outer node is called a "parent node."
+something else could nest inside. This inner node is called a child node.
+The outer node is called a parent node.
 
 An example of a normal tag is a paragraph:
 
@@ -106,7 +106,7 @@ First, let's add a title to our page:
 
 Refresh the page and view the Elements tab again. You should see that a new,
 self-closing child-node has appeared underneath `body`. You can use the
-disclosure triangle to see which children are "wrapped" or "nested within" the
+disclosure triangle to see which children are wrapped or nested within the
 `body` tag.
 
 Next, we'll add a paragraph below the title. We'll also add some highlighted
@@ -120,7 +120,7 @@ bits of text to the paragraph to make it stand out a little.
 ```
 
 Save the file and check out the page in the 'Elements' tab.  What's happening
-above is that we added some _inline_ elements, `<strong>` and `<em>` to our
+above is that we added some inline elements, `<strong>` and `<em>` to our
 paragraph to style things a little. The `<strong>` tag makes any text within
 look **important**. It's usually bold in browsers by default. The `<em>` tag
 allows us to _emphasize_ certain text. This text is typically rendered as
@@ -179,13 +179,13 @@ contain columns (or cells). In the `<thead>` row, cells are represented as
 
 That's a _lot_ of nesting.
 
-Look again at the 'Elements' tab. Expand out all the children of the `table`.
-This is the _DOM tree_!
+Look again at the Elements tab. Expand out all the children of the `table`.
+This is the DOM tree!
 
 ## Moving On
 
 When you're ready to leave this lab, end the `httpserver` server by typing
-"Control + C." Run `learn` from the command line. If the
+Control + C. Run `learn` from the command line. If the
 test pass, enter `learn submit`. You'll then be prompted to move on.
 
 
