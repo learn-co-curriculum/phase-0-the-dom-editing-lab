@@ -76,7 +76,7 @@ the IP provided to open up `index.html` (alternatively, if you're not using the
 in-browser IDE, you can use `open index.html` in the folder you're working on
 to open up a copy of the file in your browser).
 
-Just to speed things up a bit, paste the following code into the file:
+Just to speed things up a bit, paste the following code into `index.html`:
 
 ```html
 <!DOCTYPE html>
