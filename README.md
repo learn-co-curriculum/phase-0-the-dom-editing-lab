@@ -1,19 +1,20 @@
 # Introduction to the DOM Lab
 
-## Problem Statement
+## Learning Goals
 
 1. Identify that DOM nodes are written as HTML
 
 ## Introduction
+
 We've started looking at the DOM and its structure. Now it's time to see what we
 can do with it.
 
-## Identify That DOM Nodes Are Written As HTML
+### Identify That DOM Nodes Are Written As HTML
 
 ![Syntax](https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif)
 
 When viewing the DOM (through DevTools' **Elements** tab) we see HTML that is a
-clone of the HTML found in the source HTML file.  DOM nodes represent all
+clone of the HTML found in the source HTML file. DOM nodes represent all
 components that make up a web page.
 
 DOM nodes most often have a starting tag and an ending tag. Because of this,
@@ -46,7 +47,7 @@ content between its parent's starting and ending tags:
 
 Some nodes only have a starting tag. Those are called self-closing elements.
 These elements do not have any content nested inside of them. More technically,
-they are called void elements. Void elements cannot, therefore, be parent nodes.
+they are called void elements. Void elements cannot be parent nodes.
 
 An example of a self-closing tag is an image:
 
@@ -67,7 +68,7 @@ elements), but the default value for most elements is either
 [`block`][html-block-elements] or [`inline`][html-inline-elements]. For the
 images above, the value is `inline`. 
 
-### Instructions
+## Instructions
 
 Enough chit-chat, let's write some HTML!
 
@@ -97,7 +98,6 @@ Open the Google Developer Tools. Click on the "Elements" tab. Here we have the
 DOM representation of the HTML source the browser loaded. Use the "Elements"
 window to see that the `body` node is, temporarily, child-less.
 
-
 First, let's add a title to our page:
 
 ```html
@@ -126,7 +126,8 @@ look **important**. It's usually bold in browsers by default. The `<em>` tag
 allows us to _emphasize_ certain text. This text is typically rendered as
 italic in browsers.
 
-Let's add a link to MDN to define HTML. We'll use the`<a>` tag for this. Add this to our existing `<p>`:
+Let's add a link to MDN to define HTML. We'll use the`<a>` tag for this. Add
+this to our existing `<p>`:
 
 ```html
   We're writing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> markup to display in our <strong>browser</strong>.
@@ -183,9 +184,8 @@ This is the DOM tree!
 ## Moving On
 
 When you're ready to leave this lab, end the `httpserver` server by typing
-Control + C. Run `learn` from the command line. If the
-test pass, enter `learn submit`. You'll then be prompted to move on.
-
+Control + C. Run `learn` from the command line. If the test pass, enter `learn
+submit`. You'll then be prompted to move on.
 
 ## Conclusion
 
