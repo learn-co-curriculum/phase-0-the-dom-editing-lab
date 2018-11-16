@@ -1,4 +1,4 @@
-# Introduction to the DOM Lab
+# DOM Editing Lab
 
 ## Learning Goals
 
@@ -200,3 +200,5 @@ Finally, we practiced working directly with the DOM.
 
 [html-block-elements]: https://developer.mozilla.org/en/docs/Web/HTML/Block-level_elements
 [html-inline-elements]: https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/fewpjs-dom-editing-lab'>DOM Editing Lab</a> on Learn.co and start learning to code for free.</p>
