@@ -72,10 +72,11 @@ images above, the value is `inline`.
 
 Enough chit-chat, let's write some HTML!
 
-In your terminal, type `httpserver` to start up a temporary web server, and use
-the IP provided to open up `index.html` (alternatively, if you're not using the
-in-browser IDE, you can use `open index.html` in the folder you're working on
-to open up a copy of the file in your browser).
+First, we need a way to view the results of our HTML in a browser. If you're
+working on your own machine, run `open index.html` from the terminal in the
+directory you're working in to open up a copy of the file in your browser. (If
+you are working in the in-browser IDE, type `httpserver` from the console to 
+start up a temporary web server, and use the IP provided to view `index.html`).
 
 Just to speed things up a bit, paste the following code into `index.html`:
 
@@ -93,6 +94,8 @@ Just to speed things up a bit, paste the following code into `index.html`:
 </body>
 </html>
 ```
+
+Refresh the page to see the changes.
 
 Open the Google Developer Tools. Click on the "Elements" tab. Here we have the
 DOM representation of the HTML source the browser loaded. Use the "Elements"
@@ -183,9 +186,10 @@ This is the DOM tree!
 
 ## Moving On
 
-When you're ready to leave this lab, end the `httpserver` server by typing
-Control + C. Run `learn` from the command line. If the test pass, enter `learn
-submit`. You'll then be prompted to move on.
+Run `learn` from the command line. If the test pass, enter `learn
+submit`. You'll then be prompted to move on. If you are working in the 
+in-browser IDE, you can end the `httpserver` server by typing
+Control + C. 
 
 ## Conclusion
 
