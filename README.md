@@ -110,8 +110,7 @@ First, let's add a title to our page:
 <h1>My HTML adventure</h1>
 ```
 
-Refresh the page and view the Elements tab again. You should see that a new,
-self-closing child-node has appeared underneath `body`. You can use the
+Refresh the page and view the Elements tab again. You should see that a new child-node has appeared underneath `body`. You can use the
 disclosure triangle to see which children are wrapped or nested within the
 `body` tag.
 
