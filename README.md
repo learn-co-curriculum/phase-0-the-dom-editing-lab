@@ -75,7 +75,7 @@ Enough chit-chat, let's write some HTML!
 First, we need a way to view the results of our HTML in a browser. 
 
 If you're working on your own machine, from the terminal in the directory you're
-working in, run `open index.html` to open up a copy of the file in your browser.
+working in, run `open index.html` to open up a copy of the file in your browser. Or, run `explorer.exe index.html` if you are using a WSL/Ubuntu local environment.
 
 If you are working in the in-browser IDE, type `httpserver` from the console to 
 start up a temporary web server, and copy the URL provided into the browser's URL
