@@ -94,15 +94,15 @@ Just to speed things up a bit, paste the following code into `index.html`:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Introduction to the DOM Lab</title>
-</head>
-<body>
-  <!--All our work for this lesson will go here-->
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introduction to the DOM Lab</title>
+  </head>
+  <body>
+    <!--All our work for this lesson will go here-->
+  </body>
 </html>
 ```
 
