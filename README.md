@@ -6,36 +6,54 @@
 
 ## Introduction
 
-We've started looking at the DOM and its structure. Now it's time to see what we
-can do with it.
+We've started looking at the DOM and how it's created. Now it's time to see its
+structure.
 
-### Identify That DOM Nodes Are Written As HTML
+If you haven't already, fork and clone this lab into your local environment.
+Navigate into its directory in the terminal, then run `code .` to open the files
+in Visual Studio Code. Finally, run `npm install` to install the lab's
+dependencies.
 
-![Syntax](https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif)
+## Identify That DOM Nodes Are Written As HTML
 
-When viewing the DOM (through DevTools' **Elements** tab) we see HTML that is a
-clone of the HTML found in the source HTML file. DOM nodes represent all
-components that make up a web page.
+In the previous lesson, we learned that, when we load a web page in a browser,
+the content we see in the DOM is a representation of the underlying HTML, CSS
+and JavaScript. If we were to view the DOM in Chrome Dev Tools (we'll learn how
+to do that shortly), we would see HTML that is a clone of the HTML found in the
+source HTML file. As we learned earlier in the course, that HTML consists of
+_elements_ that in turn consist of HTML _tags_ and their content.
 
-DOM nodes most often have a starting tag and an ending tag. Because of this,
-something else could nest inside. This inner node is called a child node.
-The outer node is called a parent node.
+When we're working in the DOM, the structure is the same. We can access objects
+in the DOM (called _nodes_) that consist of tags, just like the HTML elements
+that make up the base HTML. Nodes and elements are not the same thing &mdash;
+all elements in the DOM are nodes but not all nodes are HTML elements. However,
+when we're working in the DOM, the nodes we access and modify _are_ virtually
+always HTML elements.
 
-An example of a normal tag is a paragraph:
+### The Structure of DOM Content
+
+We'll start by going over how content in the DOM is structured using nodes. Most
+or all of the information below should be familiar from what you've learned
+about HTML elements.
+
+DOM nodes most often have a starting tag and an ending tag. Examples include a
+paragraph:
 
 ```html
 <p>I am a paragraph.</p>
 ```
 
-Another normal tag is a main section:
+or a `main` section:
 
 ```html
 <main>
 </main>
 ```
 
-To nest items in a normal tag, we simply add the child node HTML element
-content between its parent's starting and ending tags:
+Because they have both starting and ending tags, we can nest other nodes inside
+them. The inner node is called a child node, and the outer node is called a
+parent node. To nest items, we simply add the child node and its content between
+its parent's starting and ending tags:
 
 ```html
 <body>
@@ -45,9 +63,9 @@ content between its parent's starting and ending tags:
 </body>
 ```
 
-Some nodes only have a starting tag. Those are called self-closing elements.
-These elements do not have any content nested inside of them. More technically,
-they are called void elements. Void elements cannot be parent nodes.
+Some nodes only have a starting tag. Those are called _self-closing elements_ or
+_void elements_. Void elements do not have any content nested inside of them and
+cannot be parent nodes.
 
 An example of a self-closing tag is an image:
 
@@ -61,25 +79,15 @@ In self-closing tags, the trailing `/` is optional. This is valid too:
 <img src="https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif" alt="A policeman" />
 ```
 
-Every HTML element has a `display` value. Since these are known by modern
-browsers, you don't have to worry about specifying the value unless you want to
-change it. This value can be many things (including `none`, which hides the
-elements), but the default value for most elements is either
-[`block`][html-block-elements] or [`inline`][html-inline-elements]. For the
-images above, the value is `inline`. 
+Enough review, let's write some HTML!
 
 ## Instructions
 
-Enough chit-chat, let's write some HTML!
+Start by running the tests and taking a look through the errors. You'll see that
+the tests are looking for certain content to be present in the HTML file.
 
-First, we need a way to view the results of our HTML in a browser. 
-
-If you're working on your own machine, from the terminal in the directory you're
-working in, run `open index.html` to open up a copy of the file in your browser. Or, run `explorer.exe index.html` if you are using a WSL/Ubuntu local environment.
-
-If you are working in the in-browser IDE, type `httpserver` from the console to 
-start up a temporary web server, and copy the URL provided into the browser's URL
-bar to view `index.html`.
+Next, open the `index.html` file in the browser using the instructions in the
+previous lesson for your development environment.
 
 Just to speed things up a bit, paste the following code into `index.html`:
 
@@ -98,11 +106,18 @@ Just to speed things up a bit, paste the following code into `index.html`:
 </html>
 ```
 
-Refresh the page to see the changes.
+Refresh the browser page to see the changes.
 
-Open the Google Developer Tools. Click on the "Elements" tab. Here we have the
-DOM representation of the HTML source the browser loaded. Use the "Elements"
-window to see that the `body` node is, temporarily, child-less.
+Open the Google Developer Tools by clicking on the "View" menu and selecting
+Developer -> Developer Tools. The Elements tab should be selected but, if it
+isn't, click on it. Here we have the DOM representation of the HTML source
+loaded by the browser. You should see the `head` element and the `body` element
+nested inside the `html` element. If the `body` element is collapsed, use the
+disclosure triangle to expand it. You should see that the `body` element is,
+temporarily, child-less. Let's go ahead and start adding some content in
+`index.html`.
+
+> Note: the _disclosure triangle_ is the triangle to the left of the `<body>` tag. When you first open the Elements tab, the nodes are generally collapsed, hiding their contents. You can click the triangle to expand the node and see the contents. Disclosure triangles are standard for hiding information throughout Chrome DevTools. If you want to see more, feel free to click on the triangle! You're not going to break anything.
 
 First, let's add a title to our page:
 
@@ -110,9 +125,9 @@ First, let's add a title to our page:
 <h1>My HTML adventure</h1>
 ```
 
-Refresh the page and view the Elements tab again. You should see that a new child-node has appeared underneath `body`. You can use the
-disclosure triangle to see which children are wrapped or nested within the
-`body` tag.
+Refresh the page to see the changes displayed in the browser. If you view the
+Elements tab again, you should see that a new child node is nested inside
+`body`. Finally, run the tests again; the first test should now be passing.
 
 Next, we'll add a paragraph below the title. We'll also add some highlighted
 bits of text to the paragraph to make it stand out a little.
@@ -128,18 +143,20 @@ Save the file and check out the page in the 'Elements' tab.  What's happening
 above is that we added some inline elements, `<strong>` and `<em>` to our
 paragraph to style things a little. The `<strong>` tag makes any text within
 look **important**. It's usually bold in browsers by default. The `<em>` tag
-allows us to _emphasize_ certain text. This text is typically rendered as
-italic in browsers.
+allows us to _emphasize_ certain text. This text is typically rendered as italic
+in browsers.
+
+Run the tests again; you should now have all but two of the tests passing.
 
 Let's add a link to MDN to define HTML. We'll use the`<a>` tag for this. Add
 this to our existing `<p>`:
 
 ```html
-  We're writing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> markup to display in our <strong>browser</strong>.
+We're writing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> markup to display in our <strong>browser</strong>.
 ```
 
-Notice that HTML attributes are shown alongside their opening tag e.g. the
-`href` attribute.
+Notice that HTML attributes (in this case, the `href` attribute) are shown
+alongside their opening tag.
 
 Lastly, we'll add a table below the paragraph to recap some of the stuff in
 this lesson:
@@ -173,36 +190,18 @@ this lesson:
 </table>
 ```
 
-Woah. That's a **lot** of markup! If you take a look at the result though,
-you'll see that it's a fairly complex visual — it's a table! Our table consists
-of a header and a body. The header allows us to give the columns a name, and
-the table body contains the rows of content. Both `<thead>` and `<tbody>` tags
-contains rows, which are represented as `<tr>` (table row). These rows then
-contain columns (or cells). In the `<thead>` row, cells are represented as
-`<th>`, while cells in `<tbody>` have their content in `<td>` tags.
+Woah. That's a **lot** of markup! If you take a look at the result, though,
+you'll see that it's a fairly complex visual &mdash; it's a table! Our table
+consists of a header and a body. The header allows us to give the columns a
+name, and the table body contains the rows of content. Both `<thead>` and
+`<tbody>` tags contains rows, which are represented as `<tr>` (table row). These
+rows then contain columns (or cells). In the `<thead>` row, cells are
+represented as `<th>`, while cells in `<tbody>` have their content in `<td>`
+tags.
 
 That's a _lot_ of nesting.
 
 Look again at the Elements tab. Expand out all the children of the `table`.
 This is the DOM tree!
 
-## Moving On
-
-Run `learn` from the command line. If the test pass, enter `learn
-submit`. You'll then be prompted to move on. If you are working in the 
-in-browser IDE, you can end the `httpserver` server by typing
-Control + C. 
-
-## Conclusion
-
-We reviewed DOM nodes and their HTML sources, and we reviewed how the DOM is
-structured. We also looked at block and inline elements and their behaviors.
-Finally, we practiced working directly with the DOM.
-
-## Resources
-
-- [HTML Block Elements][html-block-elements]
-- [HTML Inline Elements][html-inline-elements]
-
-[html-block-elements]: https://developer.mozilla.org/en/docs/Web/HTML/Block-level_elements
-[html-inline-elements]: https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
+When you're done, go ahead and run the tests. They should now all be passing.
