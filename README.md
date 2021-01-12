@@ -27,14 +27,14 @@ When we're working in the DOM, the structure is the same. We can access objects
 in the DOM (called _nodes_) that consist of tags, just like the HTML elements
 that make up the base HTML. Nodes and elements are not the same thing &mdash;
 all elements in the DOM are nodes but not all nodes are HTML elements. However,
-when we're working in the DOM, the nodes we access and modify _are_ virtually
+when we're working in the DOM, the nodes we access and modify are virtually
 always HTML elements.
 
 ### The Structure of DOM Content
 
-We'll start by going over how content in the DOM is structured using nodes. Most
-or all of the information below should be familiar from what you've learned
-about HTML elements.
+We'll start by going over how content in the DOM is structured using nodes. The
+information below should be familiar from what you've learned about HTML
+elements.
 
 DOM nodes most often have a starting tag and an ending tag. Examples include a
 paragraph:
@@ -111,13 +111,13 @@ Refresh the browser page to see the changes.
 Open the Google Developer Tools by clicking on the "View" menu and selecting
 Developer -> Developer Tools. The Elements tab should be selected but, if it
 isn't, click on it. Here we have the DOM representation of the HTML source
-loaded by the browser. You should see the `head` element and the `body` element
-nested inside the `html` element. If the `body` element is collapsed, use the
+loaded by the browser. You should see the `head` and `body` elements nested
+inside the `html` element. If the `body` element is collapsed, use the
 disclosure triangle to expand it. You should see that the `body` element is,
 temporarily, child-less. Let's go ahead and start adding some content in
 `index.html`.
 
-> Note: the _disclosure triangle_ is the triangle to the left of the `<body>` tag. When you first open the Elements tab, the nodes are generally collapsed, hiding their contents. You can click the triangle to expand the node and see the contents. Disclosure triangles are standard for hiding information throughout Chrome DevTools. If you want to see more, feel free to click on the triangle! You're not going to break anything.
+> Note: the _disclosure triangle_ is the triangle to the left of the `<body>` tag. When you first open the Elements tab, the nodes are generally collapsed, hiding their contents. You can click the triangle to expand the node and see its contents. Disclosure triangles are standard for hiding information throughout Chrome DevTools. If you want to see more, feel free to click on the triangle! You're not going to break anything.
 
 First, let's add a title to our page:
 
@@ -126,7 +126,7 @@ First, let's add a title to our page:
 ```
 
 Refresh the page to see the changes displayed in the browser. If you view the
-Elements tab again, you should see that a new child node is nested inside
+Elements tab again, you should see that a new child node is nested inside the
 `body`. Finally, run the tests again; the first test should now be passing.
 
 Next, we'll add a paragraph below the title. We'll also add some highlighted
@@ -195,9 +195,9 @@ you'll see that it's a fairly complex visual &mdash; it's a table! Our table
 consists of a header and a body. The header allows us to give the columns a
 name, and the table body contains the rows of content. Both `<thead>` and
 `<tbody>` tags contains rows, which are represented as `<tr>` (table row). These
-rows then contain columns (or cells). In the `<thead>` row, cells are
-represented as `<th>`, while cells in `<tbody>` have their content in `<td>`
-tags.
+rows then contain cells which form the table's columns. In the `<thead>` row,
+cells are represented as `<th>`, while cells in `<tbody>` have their content in
+`<td>` tags.
 
 That's a _lot_ of nesting.
 
