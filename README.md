@@ -117,7 +117,7 @@ disclosure triangle to expand it. You should see that the `body` element is,
 temporarily, child-less. Let's go ahead and start adding some content in
 `index.html`.
 
-> Note: the _disclosure triangle_ is the triangle to the left of the `<body>` tag. When you first open the Elements tab, the nodes are generally collapsed, hiding their contents. You can click the triangle to expand the node and see its contents. Disclosure triangles are standard for hiding information throughout Chrome DevTools. If you want to see more, feel free to click on the triangle! You're not going to break anything.
+**Note**: the _disclosure triangle_ is the triangle to the left of the `<body>` tag. When you first open the Elements tab, the nodes are generally collapsed, hiding their contents. You can click the triangle to expand the node and see its contents. Disclosure triangles are standard for hiding information throughout Chrome DevTools. If you want to see more, feel free to click on the triangle! You're not going to break anything.
 
 First, let's add a title to our page:
 
