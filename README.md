@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-1. Identify that DOM nodes are written as HTML
+- Identify that DOM nodes are written as HTML
 
 ## Introduction
 
@@ -25,7 +25,7 @@ _elements_ that in turn consist of HTML _tags_ and their content.
 
 When we're working in the DOM, the structure is the same. We can access objects
 in the DOM (called _nodes_) that consist of tags, just like the HTML elements
-that make up the base HTML. Nodes and elements are not the same thing &mdash;
+that make up the base HTML. Nodes and elements are not the same thing —
 all elements in the DOM are nodes but not all nodes are HTML elements. However,
 when we're working in the DOM, the nodes we access and modify are virtually
 always HTML elements.
@@ -191,7 +191,7 @@ this lesson:
 ```
 
 Woah. That's a **lot** of markup! If you take a look at the result, though,
-you'll see that it's a fairly complex visual &mdash; it's a table! Our table
+you'll see that it's a fairly complex visual — it's a table! Our table
 consists of a header and a body. The header allows us to give the columns a
 name, and the table body contains the rows of content. Both `<thead>` and
 `<tbody>` tags contains rows, which are represented as `<tr>` (table row). These
