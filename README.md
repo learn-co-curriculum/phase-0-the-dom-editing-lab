@@ -148,8 +148,8 @@ in browsers.
 
 Run the tests again; you should now have all but two of the tests passing.
 
-Let's add a link to MDN to define HTML. We'll use the`<a>` tag for this. Add
-this to our existing `<p>`:
+In our paragraph, let's make "HTML" a hyperlink and link to the MDN definition.
+We'll use the`<a>` tag for this. Add this to our existing `<p>`:
 
 ```html
 We're writing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> markup to display in our <strong>browser</strong>.
