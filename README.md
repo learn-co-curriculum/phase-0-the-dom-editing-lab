@@ -46,8 +46,7 @@ paragraph:
 or a `main` section:
 
 ```html
-<main>
-</main>
+<main></main>
 ```
 
 Because they have both starting and ending tags, we can nest other nodes inside
@@ -70,13 +69,19 @@ cannot be parent nodes.
 An example of a self-closing tag is an image:
 
 ```html
-<img src="https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif" alt="A policeman" />
+<img
+  src="https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif"
+  alt="A policeman"
+/>
 ```
 
 In self-closing tags, the trailing `/` is optional. This is valid too:
 
 ```html
-<img src="https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif" alt="A policeman">
+<img
+  src="https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif"
+  alt="A policeman"
+/>
 ```
 
 Enough review, let's write some HTML!
@@ -95,9 +100,9 @@ Just to speed things up a bit, paste the following code into `index.html`:
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Introduction to the DOM Lab</title>
   </head>
   <body>
@@ -117,7 +122,15 @@ disclosure triangle to expand it. You should see that the `body` element is,
 temporarily, child-less. Let's go ahead and start adding some content in
 `index.html`.
 
-**Note**: the _disclosure triangle_ is the triangle to the left of the `<body>` tag. When you first open the Elements tab, the nodes are generally collapsed, hiding their contents. You can click the triangle to expand the node and see its contents. Disclosure triangles are standard for hiding information throughout Chrome DevTools. If you want to see more, feel free to click on the triangle! You're not going to break anything.
+**Note**: the
+[disclosure triangle](https://en.wikipedia.org/wiki/Disclosure_widget) is the
+triangle to the left of the `<body>` tag. When you first open the Elements tab,
+the nodes are generally collapsed, hiding their contents. You can click the
+triangle to expand the node and see its contents. Disclosure triangles are
+standard for hiding information throughout Chrome DevTools. If you want to see
+more, feel free to click on the triangle! You're not going to break anything.
+
+![Disclosure Triangle](https://curriculum-content.s3.amazonaws.com/phase-1/dom-editing-lab/disclosure-triangle.png)
 
 First, let's add a title to our page:
 
@@ -134,12 +147,12 @@ bits of text to the paragraph to make it stand out a little.
 
 ```html
 <p>
-  We're writing HTML markup to display in our <strong>browser</strong>.
-  We're basically telling computers what to do. <em>Neat!</em>
+  We're writing HTML markup to display in our <strong>browser</strong>. We're
+  basically telling computers what to do. <em>Neat!</em>
 </p>
 ```
 
-Save the file and check out the page in the 'Elements' tab.  What's happening
+Save the file and check out the page in the 'Elements' tab. What's happening
 above is that we added some inline elements, `<strong>` and `<em>` to our
 paragraph to style things a little. The `<strong>` tag makes any text within
 look **important**. It's usually bold in browsers by default. The `<em>` tag
@@ -152,7 +165,9 @@ In our paragraph, let's make "HTML" a hyperlink and link to the MDN definition.
 We'll use the`<a>` tag for this. Add this to our existing `<p>`:
 
 ```html
-We're writing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> markup to display in our <strong>browser</strong>.
+We're writing
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> markup to
+display in our <strong>browser</strong>.
 ```
 
 Notice that HTML attributes (in this case, the `href` attribute) are shown
