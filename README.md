@@ -81,7 +81,7 @@ In self-closing tags, the trailing `/` is optional. This is valid too:
 <img
   src="https://media.giphy.com/media/3o6MbkZSYy4mI3gLYc/giphy.gif"
   alt="A policeman"
-/>
+>
 ```
 
 Enough review, let's write some HTML!
