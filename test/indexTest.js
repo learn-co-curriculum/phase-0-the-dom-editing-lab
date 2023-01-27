@@ -1,4 +1,4 @@
-require ( './helpers.js' );
+require("./helpers.js");
 
 describe("within index.html", () => {
   it("contains a <body> tag", () => {
@@ -24,7 +24,7 @@ describe("within index.html", () => {
       '<a href="https://developer.mozilla.org/en-US/docs/Web/HTML">'
     );
   });
-  it("within the <body>, it contains an <table> tag", () => {
+  it("within the <body>, it contains a <table> tag", () => {
     expect(document.querySelector("body").innerHTML).to.include("table");
   });
 });
