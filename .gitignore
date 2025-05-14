@@ -19,3 +19,4 @@ jspm_packages
 !/log/.keep
 /tmp
     
+package-lock.json
